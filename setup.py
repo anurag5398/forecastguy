@@ -11,6 +11,6 @@ setup(
       version = '0.1',
       license = 'GNU General Public License v3.0',
       description = 'CLI for finding forecast',
-      long_description = open('README.txt').read(),
+      long_description = open('README.md').read(),
       scripts = ['forecastguy/forecast.py']
       )
