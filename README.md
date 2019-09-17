@@ -16,13 +16,11 @@ Using forecastguy one could find forecast of any place on any day at any time, m
 3. test `python forecast.py -h`
 <br/>
 <h2>Usage:</h2>
-```
+~~~
 python forecast.py place [-t/--type hourly] [-d/--date day/month/year]
-```
+~~~
 <br>
-```
-python forecast.py place [-t/--type hourly] [-d/--date day/month/year]
-```
+
 <br></br>place: can be any district, locality, city, keyword, etc <br/>
 -t/--type: current(display current forecast)/hourly(display today's hourly forecast)/5days(5 days forecast)/15days(15 days forecast)/daily<br/>
 -d/--date day/month/year (After 1/1/2014) <br/>
