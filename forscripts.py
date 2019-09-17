@@ -55,7 +55,7 @@ def getplaces(place):
         if searchQuery:
 
             if(len(searchQuery.json()["location"]["address"]) > 4):
-                print("\nTop found places based on input keywords: \t")
+                print("\nTop found places based on input argument: \t")
                 for i in range(0, 5):
                     print(str(i) + ") " + searchQuery.json()
                           ["location"]["address"][i])
@@ -73,6 +73,7 @@ def getplaces(place):
                     return 0
 
             else:
+                print("\nTop found places based on input argument: \t")
                 for i in range(
                     0, len(
                         searchQuery.json()["location"]["address"])):
