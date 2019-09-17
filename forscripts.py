@@ -62,8 +62,10 @@ def getplaces(place):
                 print("Please Select the place by entering the corresponding number: ")
                 option = int(input())
                 if(option < len(searchQuery.json()["location"]["address"])):
+                    print("#"*40)
                     print("Selected Place: ", searchQuery.json()
                           ["location"]["address"][option])
+                    print("#"*40)
                     return searchQuery.json()["location"]["address"][option], searchQuery.json()[
                         "location"]["placeId"][option]
                 else:
@@ -135,7 +137,7 @@ def displayDateForecast(placeId, placeName, Date):
                 "\t")
             if(len(searchQuery.content) < 10):
                 print(
-                    "DSX API is down now, wait some time to query date again.\n In the meantime, working on using some other API")
+                    "Please Enter date between 1/1/2014 till yestarday!")
                 return 0
             print(searchQuery.content)
             table = PrettyTable(['Stats', ''])
