@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
       name = 'forecastguy',
-      url = 'notyet',
+      url = 'https://github.com/anurag5398/forecastguy',
       author = 'Anurag Srivastava',
       author_email = 'anurags2898@gmail.com',
       packages = ['forecastguy'],
