@@ -12,8 +12,8 @@ Using forecastguy one could find forecast of any place on any day at any time, m
 
 <h2>Installation:</h2>
 1. Clone the repository or download and extract manually <br/>
-2. cd to folder and execute *pip install -r requirements.txt* <br/>
-3. test *python forecast.py -h*
+2. cd to folder and execute <i>pip install -r requirements.txt</i> <br/>
+3. test <i>python forecast.py -h</i>
 <br/>
 <h2>Usage:</h2>
 
