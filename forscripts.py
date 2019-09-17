@@ -62,10 +62,10 @@ def getplaces(place):
                 print("Please Select the place by entering the corresponding number: ")
                 option = int(input())
                 if(option < len(searchQuery.json()["location"]["address"])):
-                    print("#"*40)
+                    print("#" * 40)
                     print("Selected Place: ", searchQuery.json()
                           ["location"]["address"][option])
-                    print("#"*40)
+                    print("#" * 40)
                     return searchQuery.json()["location"]["address"][option], searchQuery.json()[
                         "location"]["placeId"][option]
                 else:
