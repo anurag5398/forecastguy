@@ -24,10 +24,9 @@ place: can be any district, locality, city, keyword, etc <br>
 -d/--date day/month/year (After 1/1/2014)
 <h8>only one of -t or -d should be passed at a time<h8><br>
 ###<h2> Examples </h2>
-```python
-python forecast.py Mumbai
+```bash
+python forecast.py mumbai
 ```
-<br>
 ```bash
 python3 forecast.py "New kartarpur" -d 10/10/2019 
 ```
