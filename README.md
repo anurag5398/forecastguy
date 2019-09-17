@@ -1,5 +1,5 @@
 # forecastguy
-Forecastguy is CLI developed for demostration. It is not production ready or fully optimized. Time was a factor while developing this tool. Hope to make it better, in comming days. Code complies with pep8 standards. In future a separate JSON API will be developed for carrying out different tasks.
+Forecastguy is CLI developed for demostration. It is not production ready or fully optimized. Time was a factor while developing this tool. Hope to make it better, in coming days. Code complies with pep8 standards. In future a separate JSON API will be developed for carrying out different tasks.
 <br>
 <h2> Requirements</h2>
 (1) requests <br>
