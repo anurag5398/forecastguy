@@ -20,7 +20,7 @@ parser.add_argument(
     help="Give --type argument for different type of forecast. Accepted types: '--type hourly/daily/now/5/15/five/fifteen' \t    *5/15 corresponds to 5days and 15days. Default: daily")
 
 args = parser.parse_args()
-print(args)
+#print(args)
 active = None
 
 
@@ -39,8 +39,8 @@ else:
         Type = args.type
         active = "Type"
 
-print(active)
-print(args)
+#print(active)
+#print(args)
 
 if __name__ == "__main__":
     if(active is None):
