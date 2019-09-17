@@ -26,11 +26,8 @@ place: can be any district, locality, city, keyword, etc <br>
 ###<h2> Examples </h2>
 ```bash
 python forecast.py mumbai
-```
-```bash
+
 python3 forecast.py "New kartarpur" -d 10/10/2019 
-```
-<br>
-```bash
+
 python3 forecast.py Bellandur -t hourly
 ```
