@@ -15,7 +15,11 @@ Using forecastguy one could find forecast of any place on any day at any time, m
 2. cd to folder and execute `pip install -r requirements.txt` <br/>
 3. test `python forecast.py -h`
 <br/>
-<h2>Usuage:</h2>
+<h2>Usage:</h2>
+```
+python forecast.py place [-t/--type hourly] [-d/--date day/month/year]
+```
+<br>
 ```
 python forecast.py place [-t/--type hourly] [-d/--date day/month/year]
 ```
