@@ -33,3 +33,7 @@ python3 forecast.py "New kartarpur" -d 10/10/2019
 ```bash
 python3 forecast.py Bellandur -t hourly
 ```<br>
+
+```bash
+pip install foobar
+```
