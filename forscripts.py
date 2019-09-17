@@ -106,7 +106,7 @@ def displayDateForecast(placeId, placeName, Date):
             'apiKey': APIKEY,
             'format': 'json',
             'language': 'en-IN',
-            'placeid': str(placeId)
+            'placeid': placeId
         }
         geoLocation = requests.get(
             "https://api.weather.com/v3/location/point?",
@@ -116,8 +116,10 @@ def displayDateForecast(placeId, placeName, Date):
         latitude = "{0:.2f}".format(latitude)
         longitude = round(geoLocation.json()["location"]["longitude"], 2)
         longitude = "{0:.2f}".format(longitude)
-        paramDate = Date.split("/")
+        print(Date)
+        paramDate = str(Date).split("/")
         paramDate = paramDate[2] + paramDate[1] + paramDate[0]
+        print(paramDate)
         searchURL = "https://dsx.weather.com/wxd/v2/PastObsAvg/en_IN/" + \
             paramDate + "/1/" + str(latitude) + "," + str(longitude)
         # print(searchURL)
@@ -333,10 +335,10 @@ def displayTypeForecast(placeId, placeName, forecastType):
         return 0
 
 
-# setapiKey()
-#name, code = getplaces("mumbai")
-# print(name,code)
-#displayDateForecast(code, name, "10/10/2019")
+setapiKey()
+name, code = getplaces("mumbai")
+print(name,code)
+displayDateForecast(code, name, "10/10/2019")
 #    displayTypeForecast(code, name, "15")
 #    displayTypeForecast(code, name, "5")
 #    displayTypeForecast(code, name, "now")
