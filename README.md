@@ -12,13 +12,13 @@ Using forecastguy one could find forecast of any place on any day at any time, m
 
 <h2>Installation</h2>
 1. Clone the repository or download and extract manually <br>
-2. cd to folder and execute ` pip install -r requirements.txt ` <br>
-3. test ` python forecast.py -h ` 
+2. cd to folder and execute `pip install -r requirements.txt` . <br>
+3. test `python forecast.py -h` .
 <br>
-<h2>Usuage: </h2>
-```bash
+##Usuage:
+```
 python forecast.py place [-t/--type hourly] [-d/--date day/month/year]
-```<br>
+```
 place: can be any district, locality, city, keyword, etc <br>
 -t/--type: current(display current forecast)/hourly(display today's hourly forecast)/5days(5 days forecast)/15days(15 days forecast)/daily<br>
 -d/--date day/month/year (After 1/1/2014)
