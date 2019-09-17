@@ -9,9 +9,9 @@ Forecastguy is CLI developed for demostration. It is not production ready or ful
 
 <h2>Installation</h2>
 
-"git clone https://github.com/anurag5398/forecastguy.git"
-<b>cd to Downloaded project/folder</b>
-"pip install -r requirements.txt"
+"git clone https://github.com/anurag5398/forecastguy.git" or Navigate to "https://github.com/anurag5398/forecastguy" and Download zip. <br>
+<b>cd to Downloaded project/folder</b><br>
+"pip install -r requirements.txt"<br>
 
 <h2> Usuage </h2><br>
 python forecast.py place [-t current/hourly/5/15] [-d day(01-31)/month(01-12)/year]<br>
