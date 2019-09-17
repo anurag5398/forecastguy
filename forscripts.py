@@ -333,13 +333,3 @@ def displayTypeForecast(placeId, placeName, forecastType):
     except BaseException:
         print("Error occured! Please try again!")
         return 0
-
-
-setapiKey()
-name, code = getplaces("mumbai")
-print(name,code)
-displayDateForecast(code, name, "10/10/2019")
-#    displayTypeForecast(code, name, "15")
-#    displayTypeForecast(code, name, "5")
-#    displayTypeForecast(code, name, "now")
-#    displayTypeForecast(code, name, "hour")
