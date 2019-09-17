@@ -1,7 +1,7 @@
 # forecastguy
 <h6>Forecastguy is CLI developed for demostration. It is not production ready or fully optimized. Time was a factor while developing this tool. Hope to make it better, in coming days. Beautiful code was not the target. Code complies with pep8 standards. In future a separate JSON API will be developed for carrying out different tasks.<br>
 Using forecastguy one could find forecast of any place on any day at any time, meaning hourly, monthly and current day options.</h6>
-__I have tried to cover most of the essential task, if required I will also cover the Optional tasks_<br>
+<br>I have tried to cover most of the essential task, if required I will also cover the Optional tasks<br>
 <br>
 <h2> Requirements</h2>
 (0) python 3+ <br>
@@ -11,18 +11,17 @@ __I have tried to cover most of the essential task, if required I will also cove
 <br>
 
 <h2>Installation</h2>
-1. Clone the repository or download and extract manually
-1. cd to folder and execute 'pip install -r requirements.txt'
-1. test 'python forecast.py -h' 
-
-<h2>Usuage </h2><br>
-### 'python forecast.py place [-t/--type hourly] [-d/--date day/month/year]'
-
+1. Clone the repository or download and extract manually <br>
+2. cd to folder and execute `pip install -r requirements.txt`
+3. test `python forecast.py -h` 
 <br>
-###place can be any district, locality, city, keyword, etc <br>
-###-t/--type current(display current forecast)/hourly(display today's hourly forecast)/5days(5 days forecast)/15days(15 days forecast)/daily<br>
-**only one of -t or -d should be passed at a time**<br>
+<h2>Usuage: </h2><br>
+```python forecast.py place [-t/--type hourly] [-d/--date day/month/year]```<br>
+place: can be any district, locality, city, keyword, etc <br>
+-t/--type: current(display current forecast)/hourly(display today's hourly forecast)/5days(5 days forecast)/15days(15 days forecast)/daily<br>
+-d/--date day/month/year (After 1/1/2014)
+<h8>only one of -t or -d should be passed at a time<h8><br>
 ###<h2> Examples </h2>
-**python forecast.py Mumbai <br>
-python3 forecast.py "New kartarpur" -d 10/10/2019 <br>
-python3 forecast.py Bellandur -t hourly**<br>
+```python forecast.py Mumbai``` <br>
+```python3 forecast.py "New kartarpur" -d 10/10/2019 ```<br>
+```python3 forecast.py Bellandur -t hourly```<br>
