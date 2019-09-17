@@ -120,16 +120,22 @@ def displayDateForecast(placeId, placeName, Date):
         paramDate = paramDate[2] + paramDate[1] + paramDate[0]
         searchURL = "https://dsx.weather.com/wxd/v2/PastObsAvg/en_IN/" + \
             paramDate + "/1/" + str(latitude) + "," + str(longitude)
+        # print(searchURL)
         searchQuery = requests.get(
             searchURL, params={
                 'api': '7bb1c920-7027-4289-9c96-ae5e263980bc'})
         if searchQuery:
             print(
-                "Displaying forecast for ",
+                "\nDisplaying forecast for ",
                 placeName,
                 " on Date",
                 Date,
                 "\t")
+            if(len(searchQuery.content) < 10):
+                print(
+                    "DSX API is down now, wait some time to query date again.\n In the meantime, working on using some other API")
+                return 0
+            print(searchQuery.content)
             table = PrettyTable(['Stats', ''])
             table.add_row(['Highest Temperature',
                            searchQuery.json()[0]["Temperatures"]["highC"]])
@@ -202,7 +208,7 @@ def displayTypeForecast(placeId, placeName, forecastType):
                             # print((quarterCast[i]["fcst_valid_local"].split("T",1)[1]).split("+",1)[0],quarterCast[i]["temp"],"\n")
                             table.add_row([(quarterCast[i]["fcst_valid_local"].split("T", 1)[1]).split(
                                 "+", 1)[0], quarterCast[i]["temp"], quarterCast[i]["phrase_32char"]])
-                    print("Displaying hourly Forecast of ", placeName)
+                    print("\nDisplaying hourly Forecast of ", placeName)
                     print(table)
                     return 1
                 else:
@@ -236,7 +242,7 @@ def displayTypeForecast(placeId, placeName, forecastType):
                                   "vt1observation"]["windSpeed"]])
                     table.add_row(['Climate Condition', currentForecast.json()[
                                   "vt1observation"]["phrase"]])
-                    print("Displaying current Forecast of ", placeName)
+                    print("\nDisplaying current Forecast of ", placeName)
                     print(table)
                     return 1
                 else:
@@ -273,7 +279,7 @@ def displayTypeForecast(placeId, placeName, forecastType):
                                 daysForecast.json()["vt1dailyForecast"]["day"]["phrase"][i],
                                 daysForecast.json()["vt1dailyForecast"]["day"]["windSpeed"][i]])
                     print(
-                        "Displaying forecast of",
+                        "\nDisplaying forecast of",
                         placeName,
                         " for next 5 days")
                     print(table)
@@ -283,7 +289,7 @@ def displayTypeForecast(placeId, placeName, forecastType):
                     return 0
 
             # fourth case for 15 days
-            elif(forecastType == "15" or forecastType == 15 or forecastType == "15days" or forecastType == "fifteen" or forecastType == "fifteendays"):
+            elif(forecastType == "15" or forecastType == 15 or forecastType == "15days" or forecastType == "fifteen" or forecastType == "fifteendays" or forecastType == "monthly"):
                 API_PARAMS = {
                     'apiKey': APIKEY,
                     'format': 'json',
@@ -314,7 +320,7 @@ def displayTypeForecast(placeId, placeName, forecastType):
                                 daysForecast.json()["vt1dailyForecast"]["day"]["phrase"][i],
                                 daysForecast.json()["vt1dailyForecast"]["day"]["windSpeed"][i]])
                     print(
-                        "Displaying forecast of",
+                        "\nDisplaying forecast of",
                         placeName,
                         " for next 15 days")
                     print(table)
@@ -328,9 +334,9 @@ def displayTypeForecast(placeId, placeName, forecastType):
 
 
 # setapiKey()
-#name, code = getplaces("rajasthan")
-# if(code != 0):
-#    #displayDateForecast(code, name, "10/01/2019")
+#name, code = getplaces("mumbai")
+# print(name,code)
+#displayDateForecast(code, name, "10/10/2019")
 #    displayTypeForecast(code, name, "15")
 #    displayTypeForecast(code, name, "5")
 #    displayTypeForecast(code, name, "now")
