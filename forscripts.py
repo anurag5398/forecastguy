@@ -142,11 +142,11 @@ def displayDateForecast(placeId, placeName, Date):
                 return 0
             print(searchQuery.content)
             table = PrettyTable(['Stats', ''])
-            table.add_row(['Highest Temperature',
+            table.add_row(['Highest Temperature(c)',
                            searchQuery.json()[0]["Temperatures"]["highC"]])
             table.add_row(['Highest Temperature at time(ISO)',
                            searchQuery.json()[0]["Temperatures"]["highTmISO"]])
-            table.add_row(['Lowest Temperature',
+            table.add_row(['Lowest Temperature(c)',
                            searchQuery.json()[0]["Temperatures"]["lowC"]])
             table.add_row(['Lowest Temperature at time(ISO)',
                            searchQuery.json()[0]["Temperatures"]["lowTmISO"]])
@@ -233,9 +233,9 @@ def displayTypeForecast(placeId, placeName, forecastType):
                     "https://api.weather.com/v2/turbo/vt1observation", params=API_PARAMS)
                 if currentForecast:
                     table = PrettyTable(['Stats', ''])
-                    table.add_row(['Current Temperature', currentForecast.json()[
+                    table.add_row(['Current Temperature(c)', currentForecast.json()[
                                   "vt1observation"]["temperature"]])
-                    table.add_row(['Feels Like', currentForecast.json()[
+                    table.add_row(['Feels Like(c)', currentForecast.json()[
                                   "vt1observation"]["feelsLike"]])
                     table.add_row(['Current Humidity', currentForecast.json()[
                                   "vt1observation"]["humidity"]])
@@ -243,7 +243,7 @@ def displayTypeForecast(placeId, placeName, forecastType):
                                   "vt1observation"]["temperatureMaxSince7am"]])
                     table.add_row(['UV radiation', currentForecast.json()[
                                   "vt1observation"]["uvDescription"]])
-                    table.add_row(['Wind Speed', currentForecast.json()[
+                    table.add_row(['Wind Speed(km/hr)', currentForecast.json()[
                                   "vt1observation"]["windSpeed"]])
                     table.add_row(['Climate Condition', currentForecast.json()[
                                   "vt1observation"]["phrase"]])
@@ -269,8 +269,8 @@ def displayTypeForecast(placeId, placeName, forecastType):
                 # print(daysForecast.json()["vt1dailyForecast"])
                 if daysForecast:
                     table = PrettyTable(['Date',
-                                         'Highest Temp',
-                                         'Lowest Temp',
+                                         'Highest Temp(c)',
+                                         'Lowest Temp(c)',
                                          'Climate Condition',
                                          'wind speed(km/hr)'])
                     for i in range(0, 5):
@@ -308,8 +308,8 @@ def displayTypeForecast(placeId, placeName, forecastType):
                 # print(daysForecast.json()["vt1dailyForecast"])
                 if daysForecast:
                     table = PrettyTable(['Date',
-                                         'Highest Temp',
-                                         'Lowest Temp',
+                                         'Highest Temp(c)',
+                                         'Lowest Temp(c)',
                                          'Climate Condition',
                                          'wind speed(km/hr)'])
                     for i in range(
