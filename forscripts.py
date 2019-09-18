@@ -79,7 +79,7 @@ def getplaces(place):
                         searchQuery.json()["location"]["address"])):
                     print(str(i) + ") " + searchQuery.json()
                           ["location"]["address"][i])
-                print("Please Select the place by entering the corresponding number: ")
+                print("\nPlease Select the place by entering the corresponding number: ")
                 option = int(input())
                 if(option < len(searchQuery.json()["location"]["address"])):
                     print("Selected Place: ", searchQuery.json()
