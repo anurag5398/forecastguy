@@ -68,7 +68,7 @@ if __name__ == "__main__":
         if(out == 1):
             print("Completed!!!")
         else:
-            print("Something went wrong! Check your argument and try again!. use -h")
+            print("Something went wrong! Invalid argument and try again!. use -h")
 
     elif(active == "Date"):
         logo()
