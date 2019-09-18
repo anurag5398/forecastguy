@@ -119,10 +119,10 @@ def displayDateForecast(placeId, placeName, Date):
         latitude = "{0:.2f}".format(latitude)
         longitude = round(geoLocation.json()["location"]["longitude"], 2)
         longitude = "{0:.2f}".format(longitude)
-        print(Date)
+        #print(Date)
         paramDate = str(Date).split("/")
         paramDate = paramDate[2] + paramDate[1] + paramDate[0]
-        print(paramDate)
+        #print(paramDate)
         searchURL = "https://dsx.weather.com/wxd/v2/PastObsAvg/en_IN/" + \
             paramDate + "/1/" + str(latitude) + "," + str(longitude)
         # print(searchURL)
