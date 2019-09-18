@@ -140,7 +140,7 @@ def displayDateForecast(placeId, placeName, Date):
                 print(
                     "Please Enter date between 1/1/2014 till yestarday!")
                 return 0
-            print(searchQuery.content)
+            #print(searchQuery.content)
             table = PrettyTable(['Stats', ''])
             table.add_row(['Highest Temperature(c)',
                            searchQuery.json()[0]["Temperatures"]["highC"]])
