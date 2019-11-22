@@ -45,7 +45,7 @@ else:
 
 
 def logo():
-    result = pyfiglet.figlet_format("ForecastGuy for C-SEK by Anurag")
+    result = pyfiglet.figlet_format("@@ ForecastGuy @@")
     print(result)
 
 
