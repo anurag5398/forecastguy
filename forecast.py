@@ -52,7 +52,9 @@ def logo():
 if __name__ == "__main__":
     if(active is None):
         logo()
-        fs.setapiKey()
+        if(fs.setapiKey()==0):
+            sys.exit("The API is not working.")
+        #fs.setapiKey()
         pName, pCode = fs.getplaces(str(Place))
         out = fs.displayTypeForecast(pCode, pName, "current")
         if(out == 1):
