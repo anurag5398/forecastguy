@@ -32,8 +32,12 @@ def setapiKey():
     sp = sp[1].split(");", 1)
     # sp[0] should have the api key
     #soup = BeautifulSoup(a.content, "lxml")
-    print("Found ApiKey", "$" + sp[0] + "$")
-    APIKEY = sp[0]
+    #print("Found ApiKey", "$" + sp[0] + "$")
+    try:
+        APIKEY = sp[0]
+        return APIKEY
+    except:
+        return 0
 
 # finding places related to keyword entered by the user
 # endpoint used: https://api.weather.com/v3/location/search
