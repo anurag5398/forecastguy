@@ -6,6 +6,7 @@ main file. python3 forecast.py place -t type/-d date
 import forscripts as fs
 import argparse
 import pyfiglet
+import sys
 
 # using argparser to input arguments
 parser = argparse.ArgumentParser()
@@ -45,7 +46,7 @@ else:
 
 
 def logo():
-    result = pyfiglet.figlet_format("@@ ForecastGuy @@")
+    result = pyfiglet.figlet_format("@@ ForecastGuy")
     print(result)
 
 
