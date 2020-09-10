@@ -7,7 +7,8 @@ Forecastguy is a CLI for finding forecast of any place on any day at any time, m
 (0) python 3+ <br/>
 (1) requests <br/>
 (2) urllib3  <br/>
-(3) prettytable  <br/>
+(3) Flask
+(4) prettytable  <br/>
 <br>
 
 <h2>Installation:</h2>
